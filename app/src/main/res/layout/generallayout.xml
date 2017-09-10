@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:hint="0"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:id="@+id/display"
+                android:height="170dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:padding="10dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/group1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2">
+
+                <Button
+                    android:id="@+id/one"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/one" />
+
+                <Button
+                    android:id="@+id/two"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/one"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/two" />
+
+                <Button
+                    android:id="@+id/three"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/two"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/three" />
+
+                <Button
+                    android:id="@+id/clear"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/three"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="clearField"
+                    android:text="@string/clear" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/group2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group1"
+                >
+                <Button
+                    android:id="@+id/four"
+                    android:text="@string/four"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"/>
+                <Button
+                    android:id="@+id/five"
+                    android:text="@string/five"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_toRightOf="@id/four"
+                    android:onClick="setNumberInEditText"/>
+                <Button
+                    android:id="@+id/six"
+                    android:text="@string/six"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_toRightOf="@id/five"
+                    android:onClick="setNumberInEditText"/>
+                <Button
+                    android:id="@+id/minus"
+                    android:text="@string/subtraction"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_toRightOf="@id/six"
+                    android:onClick="setNumberInEditText"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/group3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group2">
+
+                <Button
+                    android:id="@+id/seven"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/seven" />
+
+                <Button
+                    android:id="@+id/eight"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/seven"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/eight" />
+
+                <Button
+                    android:id="@+id/nine"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/eight"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/nine" />
+
+                <Button
+                    android:id="@+id/division"
+                    android:layout_width="90dp"
+                    android:layout_height="55dp"
+                    android:layout_toRightOf="@id/nine"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/division" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/group4"
+                android:layout_below="@id/group3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/zero"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:elevation="0dp"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/zero" />
+
+                <Button
+                    android:id="@+id/multiplication"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_toRightOf="@id/zero"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/multiplication" />
+
+                <Button
+                    android:id="@+id/plus"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_toRightOf="@id/multiplication"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="setNumberInEditText"
+                    android:text="@string/addition" />
+
+                <Button
+                    android:id="@+id/equalls"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_toRightOf="@id/plus"
+                    android:backgroundTint="@color/colorAccent"
+                    android:onClick="calculate"
+                    android:text="@string/equalls" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
