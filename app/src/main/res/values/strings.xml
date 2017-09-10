@@ -21,4 +21,7 @@
     <string name="clear">c</string>
     <string name="equalls">=</string>
 
+    <string name="scientific">Scientific</string>
+    <string name="Conversions">Conversions</string>
+
 </resources>
